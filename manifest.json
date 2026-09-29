@@ -1,0 +1,82 @@
+{
+  "name": "DBYC - Don Bosco Youth Centre",
+  "short_name": "DBYC",
+  "description": "Don Bosco Youth Centre — Bosco Pulse Youth Movement System",
+  "id": "dbyc-portal",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui", "browser"],
+  "orientation": "any",
+  "background_color": "#003F8A",
+  "theme_color": "#003F8A",
+  "categories": ["productivity", "education", "lifestyle"],
+  "lang": "en",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "assets/dbyc-logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/dbyc-logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/dbyc-logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "maskable"
+    },
+    {
+      "src": "dbyc-logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "dbyc-logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Dashboard",
+      "short_name": "Dashboard",
+      "url": "./index.html#dashboard",
+      "icons": [{"src": "dbyc-logo.jpg", "sizes": "192x192", "type": "image/jpeg"}]
+    },
+    {
+      "name": "Members Registry",
+      "short_name": "Members",
+      "url": "./index.html#members",
+      "icons": [{"src": "dbyc-logo.jpg", "sizes": "192x192", "type": "image/jpeg"}]
+    },
+    {
+      "name": "QR Attendance",
+      "short_name": "Attendance",
+      "url": "./index.html#attendance",
+      "icons": [{"src": "dbyc-logo.jpg", "sizes": "192x192", "type": "image/jpeg"}]
+    },
+    {
+      "name": "Birthday Celebrations",
+      "short_name": "Birthdays",
+      "url": "./index.html#birthdays",
+      "icons": [{"src": "dbyc-logo.jpg", "sizes": "192x192", "type": "image/jpeg"}]
+    },
+    {
+      "name": "Team System",
+      "short_name": "Teams",
+      "url": "./index.html#teams",
+      "icons": [{"src": "dbyc-logo.jpg", "sizes": "192x192", "type": "image/jpeg"}]
+    }
+  ],
+  "prefer_related_applications": false,
+  "related_applications": []
+}

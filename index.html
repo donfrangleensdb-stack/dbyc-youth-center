@@ -1,0 +1,2968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>DBYC - Don Bosco Youth Centre</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="color-scheme" content="light">
+  <meta name="supported-color-schemes" content="light">
+  <meta name="theme-color" content="#003F8A" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#003F8A" media="(prefers-color-scheme: dark)">
+  <meta name="msapplication-TileColor" content="#003F8A">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="DBYC">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- Google Fonts: Poppins & Noto Sans Tamil for Standardized Bilingual Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Embedded All-In-One Application Styles -->
+  <style>
+:root {
+  /* Brand Colors */
+  --primary:        #003F8A;
+  --primary-dark:   #002D63;
+  --primary-light:  #1565C0;
+  --primary-10:     rgba(0, 63, 138, 0.10);
+  --primary-20:     rgba(0, 63, 138, 0.20);
+  --accent:         #FFB800;
+  --accent-dark:    #D99E00;
+  --accent-light:   #FFD054;
+  --accent-10:      rgba(255, 184, 0, 0.15);
+  --bg:             #F4F6FB;
+  --surface:        #FFFFFF;
+  --surface-alt:    #F0F4FF;
+  --border:         #DDE3F0;
+  --border-strong:  #B8C4DD;
+  --overlay:        rgba(0, 20, 60, 0.50);
+  --text-primary:   #0E1B35;
+  --text-secondary: #4A5C82;
+  --text-muted:     #8A97B4;
+  --text-on-primary:#FFFFFF;
+  --text-on-accent: #1A1000;
+  --success:        #16A34A;
+  --success-bg:     #DCFCE7;
+  --warning:        #D97706;
+  --warning-bg:     #FEF3C7;
+  --danger:         #DC2626;
+  --danger-bg:      #FEE2E2;
+  --info:           #2563EB;
+  --info-bg:        #DBEAFE;
+
+  /* 4 Teams */
+  --team-red:       #DC2626;
+  --team-red-bg:    #FEE2E2;
+  --team-blue:      #2563EB;
+  --team-blue-bg:   #DBEAFE;
+  --team-green:     #16A34A;
+  --team-green-bg:  #DCFCE7;
+  --team-yellow:    #CA8A04;
+  --team-yellow-bg: #FEF9C3;
+
+  /* 6 Youth Groups */
+  --group-sub-juniors:  #F43F5E;
+  --group-juniors:      #8B5CF6;
+  --group-seniors:      #3B82F6;
+  --group-inters:       #10B981;
+  --group-super-seniors:#F59E0B;
+  --group-elders:       #EF4444;
+
+  --font:           'Poppins', 'Noto Sans Tamil', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono:      'Courier New', monospace;
+  --text-xs:  0.6875rem; --text-sm: 0.8125rem; --text-base: 0.9375rem;
+  --text-md:  1rem; --text-lg: 1.125rem; --text-xl: 1.25rem;
+  --text-2xl: 1.5rem; --text-3xl: 1.875rem; --text-4xl: 2.25rem;
+  --fw-normal:400; --fw-medium:500; --fw-semibold:600; --fw-bold:700; --fw-extrabold:800;
+  --lh-tight:1.2; --lh-snug:1.4; --lh-normal:1.6;
+  --s-1:4px; --s-2:8px; --s-3:12px; --s-4:16px; --s-5:20px;
+  --s-6:24px; --s-8:32px; --s-10:40px; --s-12:48px; --s-16:64px;
+  --r-sm:6px; --r-md:10px; --r-lg:16px; --r-xl:24px; --r-2xl:32px; --r-full:9999px;
+  --shadow-xs:0 1px 2px rgba(14,27,53,0.06);
+  --shadow-sm:0 1px 4px rgba(14,27,53,0.08),0 1px 2px rgba(14,27,53,0.04);
+  --shadow-md:0 4px 12px rgba(14,27,53,0.10),0 2px 4px rgba(14,27,53,0.06);
+  --shadow-lg:0 8px 24px rgba(14,27,53,0.12),0 4px 8px rgba(14,27,53,0.06);
+  --shadow-xl:0 16px 40px rgba(14,27,53,0.14),0 8px 16px rgba(14,27,53,0.08);
+  --shadow-primary:0 4px 16px rgba(0,63,138,0.30);
+  --shadow-accent:0 4px 16px rgba(255,184,0,0.40);
+  --sidebar-w:260px; --topbar-h:64px; --bottom-nav-h:68px; --content-max:1280px;
+  --ease:cubic-bezier(0.4,0,0.2,1); --ease-out:cubic-bezier(0,0,0.2,1);
+  --dur-fast:120ms; --dur-base:200ms; --dur-slow:350ms;
+  --z-sidebar:100; --z-topbar:200; --z-bottom-nav:200; --z-modal:500; --z-toast:999;
+}
+/* DBYC CSS Reset & Base Styles */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; -webkit-text-size-adjust: 100%; height: 100%; }
+body { font-family: var(--font); font-size: var(--text-base); font-weight: var(--fw-normal); line-height: var(--lh-normal); color: var(--text-primary); background-color: var(--bg); min-height: 100vh; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; overflow-x: hidden; }
+h1,h2,h3,h4,h5,h6 { font-weight: var(--fw-semibold); line-height: var(--lh-tight); color: var(--text-primary); }
+p { line-height: var(--lh-normal); }
+a { color: var(--primary); text-decoration: none; transition: color var(--dur-base) var(--ease); }
+a:hover { color: var(--primary-light); text-decoration: underline; }
+ul, ol { list-style: none; }
+img, svg, video { display: block; max-width: 100%; }
+input, textarea, select, button { font-family: inherit; font-size: inherit; line-height: inherit; }
+button { cursor: pointer; border: none; background: none; }
+input:focus, textarea:focus, select:focus, button:focus { outline: 2px solid var(--accent); outline-offset: 2px; }
+table { border-collapse: collapse; width: 100%; }
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: var(--r-full); }
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+::selection { background: var(--accent-10); color: var(--text-primary); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border-width: 0; }
+.hidden { display: none !important; }
+.invisible { visibility: hidden; }
+/* DBYC â€” App Shell Layout with Don Bosco Spiritual Themes */
+#login-screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: 
+    linear-gradient(145deg, rgba(0, 35, 85, 0.88) 0%, rgba(0, 63, 138, 0.82) 55%, rgba(15, 23, 42, 0.94) 100%),
+    url('assets/don-bosco-walk.jpg') center/cover no-repeat fixed;
+  padding: var(--s-6);
+  position: relative;
+  overflow: hidden;
+}
+
+#login-screen::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 85%, rgba(255, 184, 0, 0.22) 0%, transparent 45%),
+    radial-gradient(circle at 85% 15%, rgba(255, 255, 255, 0.15) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+/* Legacy login-card replaced with standard Front Portal styles */
+
+/* Don Bosco Authenticated Portal Watermark & Background */
+body {
+  background-color: var(--bg);
+  background-image: 
+    linear-gradient(180deg, rgba(244, 246, 251, 0.94) 0%, rgba(240, 244, 250, 0.96) 100%),
+    url('../assets/don-bosco-banner.jpg');
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+#app-shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+#sidebar {
+  width: var(--sidebar-w);
+  min-height: 100vh;
+  background: linear-gradient(180deg, #002D63 0%, #001A3D 100%);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0; top: 0;
+  z-index: var(--z-sidebar);
+  transition: transform var(--dur-slow) var(--ease);
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  padding: var(--s-4) var(--s-5);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  min-height: var(--topbar-h);
+  background: rgba(0,0,0,0.15);
+}
+
+.sidebar-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--r-full);
+  object-fit: cover;
+  border: 2px solid var(--accent);
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.sidebar-brand {
+  font-weight: var(--fw-bold);
+  font-size: var(--text-base);
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+.sidebar-brand span {
+  display: block;
+  font-size: 10px;
+  font-weight: var(--fw-normal);
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.04em;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: var(--s-4) var(--s-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-1);
+}
+
+.sidebar-section-title {
+  font-size: 10px;
+  font-weight: var(--fw-bold);
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: var(--s-3) var(--s-3) var(--s-1);
+  margin-top: var(--s-2);
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  padding: var(--s-3) var(--s-3);
+  border-radius: var(--r-md);
+  color: rgba(255,255,255,0.8);
+  font-size: var(--text-sm);
+  font-weight: var(--fw-medium);
+  cursor: pointer;
+  transition: background var(--dur-base) var(--ease), color var(--dur-base) var(--ease);
+  text-decoration: none;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+}
+.nav-item:hover {
+  background: rgba(255,255,255,0.1);
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.nav-item.active {
+  background: var(--accent);
+  color: var(--text-on-accent);
+  font-weight: var(--fw-semibold);
+  box-shadow: var(--shadow-accent);
+}
+.nav-item .nav-icon {
+  font-size: var(--text-lg);
+  flex-shrink: 0;
+  width: 22px;
+  text-align: center;
+}
+
+.sidebar-footer {
+  padding: var(--s-4) var(--s-3);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  background: rgba(0,0,0,0.15);
+}
+
+.sidebar-user {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  padding: var(--s-2);
+  border-radius: var(--r-md);
+  cursor: pointer;
+}
+.sidebar-user:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.sidebar-user-avatar {
+  width: 38px; height: 38px;
+  border-radius: var(--r-full);
+  background: var(--accent);
+  color: var(--primary-dark);
+  display: flex; align-items: center; justify-content: center;
+  font-size: var(--text-sm);
+  font-weight: var(--fw-bold);
+  flex-shrink: 0;
+  overflow: hidden;
+  border: 1.5px solid #fff;
+}
+.sidebar-user-avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+.sidebar-user-info { flex: 1; overflow: hidden; }
+.sidebar-user-name {
+  font-size: var(--text-sm);
+  font-weight: var(--fw-semibold);
+  color: #fff;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.sidebar-user-role {
+  font-size: var(--text-xs);
+  color: rgba(255,255,255,0.6);
+  text-transform: capitalize;
+}
+
+.main-wrapper {
+  flex: 1;
+  margin-left: var(--sidebar-w);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 0;
+}
+
+#topbar {
+  height: var(--topbar-h);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--s-6);
+  gap: var(--s-4);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-topbar);
+  box-shadow: var(--shadow-sm);
+}
+
+.topbar-menu-btn {
+  width: 38px; height: 38px;
+  border-radius: var(--r-md);
+  display: none;
+  align-items: center; justify-content: center;
+  color: var(--text-secondary);
+  font-size: var(--text-xl);
+  cursor: pointer;
+}
+
+.topbar-title {
+  font-size: var(--text-lg);
+  font-weight: var(--fw-semibold);
+  color: var(--text-primary);
+  flex: 1;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+}
+
+.topbar-avatar {
+  width: 38px; height: 38px;
+  border-radius: var(--r-full);
+  background: var(--primary);
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: var(--text-sm);
+  font-weight: var(--fw-bold);
+  border: 2px solid var(--accent);
+  overflow: hidden;
+  cursor: pointer;
+}
+.topbar-avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+#view-container {
+  flex: 1;
+  padding: var(--s-6);
+  max-width: var(--content-max);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--s-4);
+  margin-bottom: var(--s-6);
+  flex-wrap: wrap;
+}
+
+.page-title {
+  font-size: var(--text-2xl);
+  font-weight: var(--fw-bold);
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.page-subtitle {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-top: var(--s-1);
+}
+
+.page-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  flex-wrap: wrap;
+}
+
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--s-5); }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-5); }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s-5); }
+.grid-auto { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--s-5); }
+
+#bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  height: var(--bottom-nav-h);
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  z-index: var(--z-bottom-nav);
+  padding: var(--s-1) var(--s-2);
+  box-shadow: 0 -4px 16px rgba(14,27,53,0.08);
+}
+
+.bottom-nav-inner {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.bottom-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 4px 8px;
+  border-radius: var(--r-md);
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+  font-weight: var(--fw-medium);
+  cursor: pointer;
+}
+.bottom-nav-item .nav-icon { font-size: 1.25rem; }
+.bottom-nav-item.active { color: var(--primary); font-weight: var(--fw-semibold); }
+
+#sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: var(--overlay);
+  z-index: calc(var(--z-sidebar) - 1);
+  backdrop-filter: blur(2px);
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+/* DBYC â€” UI Components */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s-2);
+  padding: 0 var(--s-4);
+  height: 40px;
+  border-radius: var(--r-md);
+  font-size: var(--text-sm);
+  font-weight: var(--fw-semibold);
+  font-family: var(--font);
+  cursor: pointer;
+  border: 1.5px solid transparent;
+  transition: all var(--dur-base) var(--ease);
+  white-space: nowrap;
+  text-decoration: none;
+}
+.btn:disabled { opacity: 0.45; cursor: not-allowed; pointer-events: none; }
+.btn-primary { background: var(--primary); color: #fff; border-color: var(--primary); }
+.btn-primary:hover { background: var(--primary-dark); border-color: var(--primary-dark); color: #fff; }
+.btn-accent { background: var(--accent); color: var(--text-on-accent); border-color: var(--accent); }
+.btn-accent:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
+.btn-outline { background: transparent; color: var(--primary); border-color: var(--primary); }
+.btn-outline:hover { background: var(--primary-10); }
+.btn-ghost { background: transparent; color: var(--text-secondary); border-color: var(--border); }
+.btn-ghost:hover { background: var(--bg); color: var(--text-primary); }
+.btn-danger { background: var(--danger); color: #fff; border-color: var(--danger); }
+.btn-danger:hover { background: #b91c1c; }
+.btn-sm  { height: 32px; padding: 0 var(--s-3); font-size: var(--text-xs); border-radius: var(--r-sm); }
+.btn-lg  { height: 48px; padding: 0 var(--s-6); font-size: var(--text-base); border-radius: var(--r-lg); }
+.btn-icon { padding: 0; width: 36px; height: 36px; }
+.btn-icon.btn-sm { width: 30px; height: 30px; }
+.btn-full { width: 100%; }
+
+.card {
+  background: var(--surface);
+  border-radius: var(--r-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--s-4) var(--s-5);
+  border-bottom: 1px solid var(--border);
+  gap: var(--s-3);
+  flex-wrap: wrap;
+}
+.card-title {
+  font-size: var(--text-base);
+  font-weight: var(--fw-semibold);
+  color: var(--text-primary);
+}
+.card-body { padding: var(--s-5); }
+.card-footer {
+  padding: var(--s-3) var(--s-5);
+  border-top: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.stat-card {
+  background: var(--surface);
+  border-radius: var(--r-lg);
+  padding: var(--s-4) var(--s-5);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-4);
+  animation: slideUp 0.3s var(--ease-out) both;
+}
+.stat-icon {
+  width: 44px; height: 44px;
+  border-radius: var(--r-md);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+.stat-body { flex: 1; min-width: 0; }
+.stat-label { font-size: var(--text-xs); font-weight: var(--fw-medium); color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+.stat-value { font-size: var(--text-2xl); font-weight: var(--fw-bold); color: var(--text-primary); line-height: 1.2; margin-top: 2px; }
+.stat-change { font-size: var(--text-xs); color: var(--text-muted); margin-top: var(--s-1); }
+.stat-change.up { color: var(--success); }
+.stat-change.down { color: var(--danger); }
+
+.member-avatar {
+  width: 40px; height: 40px;
+  border-radius: var(--r-full);
+  background: var(--primary-10);
+  border: 2px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: var(--text-sm);
+  font-weight: var(--fw-bold);
+  color: var(--primary);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.member-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.member-avatar.large { width: 88px; height: 88px; font-size: var(--text-2xl); border-width: 3px; }
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px var(--s-3);
+  border-radius: var(--r-full);
+  font-size: var(--text-xs);
+  font-weight: var(--fw-semibold);
+  line-height: 1.5;
+  white-space: nowrap;
+}
+.badge-primary { background: var(--primary-10); color: var(--primary); }
+.badge-accent  { background: var(--accent-10);  color: var(--accent-dark); }
+.badge-success { background: var(--success-bg); color: var(--success); }
+.badge-warning { background: var(--warning-bg); color: var(--warning); }
+.badge-danger  { background: var(--danger-bg);  color: var(--danger); }
+.badge-info    { background: var(--info-bg);    color: var(--info); }
+
+.badge-sub-juniors   { background: rgba(244,63,94,0.12);   color: var(--group-sub-juniors); }
+.badge-juniors       { background: rgba(139,92,246,0.12);  color: var(--group-juniors); }
+.badge-seniors       { background: rgba(59,130,246,0.12);  color: var(--group-seniors); }
+.badge-inters        { background: rgba(16,185,129,0.12);  color: var(--group-inters); }
+.badge-super-seniors { background: rgba(245,158,11,0.12);  color: var(--group-super-seniors); }
+.badge-elders        { background: rgba(239,68,68,0.12);   color: var(--group-elders); }
+
+.table-wrapper { overflow-x: auto; border-radius: var(--r-lg); border: 1px solid var(--border); }
+.data-table { width: 100%; border-collapse: collapse; font-size: var(--text-sm); white-space: nowrap; }
+.data-table thead tr { background: var(--bg); border-bottom: 1px solid var(--border); }
+.data-table th { padding: var(--s-3) var(--s-4); text-align: left; font-size: var(--text-xs); font-weight: var(--fw-semibold); color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+.data-table td { padding: var(--s-3) var(--s-4); border-bottom: 1px solid var(--border); color: var(--text-primary); vertical-align: middle; }
+.data-table tbody tr:hover { background: var(--surface-alt); }
+.data-table tbody tr:last-child td { border-bottom: none; }
+.table-actions { display: flex; align-items: center; gap: var(--s-2); }
+
+.form-group { display: flex; flex-direction: column; gap: var(--s-2); }
+.form-row   { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-4); }
+.form-label { font-size: var(--text-sm); font-weight: var(--fw-medium); color: var(--text-primary); }
+.form-label .required { color: var(--danger); margin-left: 2px; }
+.form-control {
+  width: 100%;
+  height: 40px;
+  padding: 0 var(--s-3);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--surface);
+  color: var(--text-primary);
+  font-size: var(--text-sm);
+  font-family: var(--font);
+}
+.form-control:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-10); }
+textarea.form-control { height: auto; padding: var(--s-2) var(--s-3); resize: vertical; min-height: 75px; }
+
+.search-wrap { position: relative; }
+.search-icon { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--text-muted); pointer-events: none; }
+.search-input { padding-left: 36px; }
+
+#modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: var(--overlay);
+  z-index: var(--z-modal);
+  align-items: center;
+  justify-content: center;
+  padding: var(--s-4);
+  backdrop-filter: blur(4px);
+}
+#modal-overlay.open { display: flex; animation: fadeIn var(--dur-base) var(--ease); }
+.modal {
+  background: var(--surface);
+  border-radius: var(--r-xl);
+  width: 100%;
+  max-width: 580px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-xl);
+  animation: scaleIn var(--dur-base) var(--ease-out);
+}
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--s-4) var(--s-6);
+  border-bottom: 1px solid var(--border);
+}
+.modal-title { font-size: var(--text-lg); font-weight: var(--fw-semibold); }
+.modal-close {
+  width: 32px; height: 32px; border-radius: var(--r-md);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-muted); font-size: var(--text-lg); cursor: pointer;
+}
+.modal-body { padding: var(--s-5) var(--s-6); overflow-y: auto; flex: 1; }
+.modal-footer {
+  padding: var(--s-3) var(--s-6);
+  border-top: 1px solid var(--border);
+  display: flex; justify-content: flex-end; gap: var(--s-3);
+}
+
+#toast-container {
+  position: fixed;
+  top: var(--s-4);
+  right: var(--s-4);
+  z-index: var(--z-toast);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  pointer-events: none;
+  max-width: 360px;
+  width: 100%;
+}
+.toast {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-3);
+  background: var(--surface);
+  border-radius: var(--r-lg);
+  padding: var(--s-3) var(--s-4);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border);
+  pointer-events: all;
+  border-left: 4px solid var(--primary);
+}
+.toast.success { border-left-color: var(--success); }
+.toast.error   { border-left-color: var(--danger); }
+.toast.warning { border-left-color: var(--warning); }
+.toast-body { flex: 1; }
+.toast-title { font-size: var(--text-sm); font-weight: var(--fw-semibold); }
+.toast-message { font-size: var(--text-xs); color: var(--text-secondary); margin-top: 2px; }
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--s-8) var(--s-4);
+  text-align: center;
+  gap: var(--s-2);
+}
+.empty-icon { font-size: 2.5rem; color: var(--text-muted); }
+.empty-title { font-size: var(--text-base); font-weight: var(--fw-semibold); color: var(--text-secondary); }
+.empty-desc  { font-size: var(--text-xs); color: var(--text-muted); max-width: 300px; }
+
+.spinner-lg {
+  width: 40px; height: 40px;
+  border: 3px solid var(--border);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+.loading-overlay {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--s-3); padding: var(--s-8);
+}
+.progress { height: 8px; background: var(--border); border-radius: var(--r-full); overflow: hidden; }
+.progress-bar { height: 100%; background: linear-gradient(90deg, var(--primary), var(--primary-light)); border-radius: var(--r-full); }
+.progress-bar.success { background: var(--success); }
+.progress-bar.warning { background: var(--warning); }
+.progress-bar.danger  { background: var(--danger); }
+
+.alert {
+  display: flex; align-items: flex-start; gap: var(--s-3); padding: var(--s-3) var(--s-4); border-radius: var(--r-md); font-size: var(--text-sm);
+}
+.alert-icon { font-size: var(--text-base); flex-shrink: 0; }
+.alert-info    { background: var(--info-bg);    color: var(--info); border: 1px solid var(--info); }
+.alert-success { background: var(--success-bg); color: var(--success); border: 1px solid var(--success); }
+.alert-warning { background: var(--warning-bg); color: var(--warning); border: 1px solid var(--warning); }
+.alert-danger  { background: var(--danger-bg);  color: var(--danger); border: 1px solid var(--danger); }
+
+.pagination { display: flex; align-items: center; gap: 4px; justify-content: center; }
+.page-btn {
+  width: 32px; height: 32px; border-radius: var(--r-md);
+  display: flex; align-items: center; justify-content: center;
+  font-size: var(--text-xs); font-weight: var(--fw-medium);
+  cursor: pointer; border: 1px solid var(--border); background: var(--surface); color: var(--text-secondary);
+}
+.page-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+.scanner-container { background: #071329; border-radius: var(--r-lg); padding: var(--s-4); position: relative; }
+.scanner-frame { max-width: 340px; margin: 0 auto; background: #000; border-radius: var(--r-md); overflow: hidden; }
+/* Team Badges */
+.badge-team-red    { background: var(--team-red-bg); color: var(--team-red); border: 1px solid rgba(220,38,38,0.25); }
+.badge-team-blue   { background: var(--team-blue-bg); color: var(--team-blue); border: 1px solid rgba(37,99,235,0.25); }
+.badge-team-green  { background: var(--team-green-bg); color: var(--team-green); border: 1px solid rgba(22,163,74,0.25); }
+.badge-team-yellow { background: var(--team-yellow-bg); color: var(--team-yellow); border: 1px solid rgba(202,138,4,0.25); }
+
+/* Qualification Badges */
+.badge-qualified { background: #DCFCE7; color: #16A34A; border: 1px solid #86EFAC; }
+.badge-pending   { background: #FEF3C7; color: #D97706; border: 1px solid #FDE68A; }
+.badge-rejected  { background: #FEE2E2; color: #DC2626; border: 1px solid #FCA5A5; }
+
+/* Points Chip */
+.points-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: linear-gradient(135deg, #FFB800, #F59E0B);
+  color: #1A1000;
+  font-weight: 700;
+  font-size: var(--text-xs);
+  padding: 2px 8px;
+  border-radius: var(--r-full);
+  box-shadow: 0 1px 4px rgba(245,158,11,0.3);
+}
+
+/* Photo Upload Box */
+.photo-uploader {
+  display: flex;
+  align-items: center;
+  gap: var(--s-4);
+  padding: var(--s-3);
+  border: 2px dashed var(--border-strong);
+  border-radius: var(--r-lg);
+  background: var(--surface-alt);
+}
+.photo-preview {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--r-md);
+  object-fit: cover;
+  border: 2px solid var(--primary);
+  background: #fff;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: var(--s-2);
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 2px;
+}
+.tab-btn {
+  padding: var(--s-2) var(--s-4);
+  font-size: var(--text-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--text-muted);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: var(--r-md) var(--r-md) 0 0;
+  transition: all var(--dur-base) var(--ease);
+  display: inline-flex;
+  align-items: center;
+}
+.tab-btn:hover {
+  color: var(--primary);
+  background: var(--surface-alt);
+}
+.tab-btn.active {
+  color: var(--primary);
+  border-bottom: 3px solid var(--primary);
+  margin-bottom: -2px;
+}
+
+/* Form hints */
+.form-hint {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+/* Skeleton Loading */
+.skeleton {
+  background: linear-gradient(90deg, var(--border) 25%, var(--surface-alt) 37%, var(--border) 63%);
+  background-size: 400% 100%;
+  animation: skeleton-loading 1.4s ease infinite;
+  border-radius: var(--r-sm);
+}
+.skeleton-text {
+  height: 14px;
+  margin-bottom: 6px;
+}
+.skeleton-text.short { width: 40%; }
+.skeleton-text.medium { width: 70%; }
+@keyframes skeleton-loading {
+  0% { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
+}
+
+/* Login Extras */
+.login-divider {
+  display: flex;
+  align-items: center;
+  margin: var(--s-4) 0;
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.05em;
+}
+.login-divider::before, .login-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--border);
+}
+.login-divider span {
+  padding: 0 var(--s-3);
+}
+.login-footer {
+  margin-top: var(--s-5);
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* Official DBYC Student Admission Application Form Sheet (A4 Portrait) */
+.admission-form-sheet {
+  background: #ffffff;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 32px 36px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 2px solid #003F8A;
+  color: #0f172a;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+}
+
+.admit-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 2px solid #003F8A;
+  padding-bottom: 14px;
+}
+
+.admit-logo, .admit-founder-img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.admit-logo {
+  border: 2px solid #003F8A;
+}
+
+.admit-founder-img {
+  border: 2px solid #FFC107;
+}
+
+.admit-org-block {
+  text-align: center;
+  flex: 1;
+}
+
+.admit-org-name {
+  font-size: 20px;
+  font-weight: 800;
+  color: #003F8A;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+}
+
+.admit-org-sub {
+  font-size: 10px;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 0.08em;
+  margin-top: 2px;
+}
+
+.admit-org-motto {
+  font-size: 11px;
+  font-style: italic;
+  color: #059669;
+  margin-top: 2px;
+}
+
+.admit-title-pill {
+  display: inline-block;
+  background: #003F8A;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 3px 14px;
+  border-radius: 20px;
+  margin-top: 6px;
+}
+
+.admit-meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8fafc;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  font-size: 12px;
+  margin: 16px 0;
+}
+
+.admit-body-grid {
+  display: grid;
+  grid-template-columns: 1fr 140px;
+  gap: 20px;
+  align-items: start;
+}
+
+.admit-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.admit-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  font-size: 12px;
+  border-bottom: 1px dashed #e2e8f0;
+  padding-bottom: 6px;
+}
+
+.admit-col {
+  color: #334155;
+}
+
+.admit-col strong {
+  color: #0f172a;
+}
+
+.admit-photo-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 2px solid #003F8A;
+  border-radius: 6px;
+  padding: 6px;
+  background: #f8fafc;
+}
+
+.admit-photo-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.admit-photo-caption {
+  font-size: 9px;
+  font-weight: 600;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+.admit-undertaking {
+  margin-top: 18px;
+  background: #f8fafc;
+  padding: 12px 14px;
+  border-left: 4px solid #003F8A;
+  border-radius: 4px;
+}
+
+.admit-undertaking-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: #003F8A;
+  margin-bottom: 4px;
+  letter-spacing: 0.04em;
+}
+
+.admit-undertaking p {
+  font-size: 11px;
+  color: #475569;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.admit-signatures {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 36px;
+  padding-top: 14px;
+}
+
+.admit-sig-box {
+  text-align: center;
+}
+
+.admit-sig-line {
+  border-bottom: 1.5px solid #0f172a;
+  margin-bottom: 6px;
+  height: 30px;
+}
+
+.admit-sig-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: #1e293b;
+  line-height: 1.3;
+}
+
+.admit-footer-note {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 9px;
+  color: #94a3b8;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 8px;
+}
+
+/* ==========================================================================
+   Tamil & English Virtual On-Screen Keyboard Dock
+   ========================================================================== */
+.virtual-keyboard-dock {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #0f172a;
+  border-top: 3px solid var(--primary);
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.35);
+  z-index: 10000;
+  padding: 10px 14px 14px;
+  animation: slideUp 0.25s var(--ease-out);
+  max-width: 900px;
+  margin: 0 auto;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.virtual-keyboard-dock.hidden {
+  display: none !important;
+}
+
+.vk-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 6px;
+}
+
+.vk-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.vk-lang-toggles {
+  display: flex;
+  gap: 4px;
+}
+
+.vk-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.vk-close-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+.vk-close-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.vk-row-label {
+  font-size: 9px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 4px 0 2px;
+  text-transform: uppercase;
+}
+
+.vk-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.vk-row-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+@media (max-width: 600px) {
+  .vk-row-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.vk-key {
+  background: #1e293b;
+  color: #ffffff;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.1s ease;
+  min-width: 28px;
+  text-align: center;
+}
+
+.vk-key:hover {
+  background: var(--primary);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.vk-key:active {
+  transform: translateY(1px);
+}
+
+.vk-key-matra {
+  background: #0284c7;
+  color: #ffffff;
+  border-color: #0369a1;
+}
+
+.vk-key-mei {
+  padding: 6px 4px;
+}
+
+.vk-bottom-bar {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.vk-key-wide {
+  flex: 2;
+  background: #334155;
+}
+
+.vk-key-action {
+  flex: 1;
+  background: #dc2626;
+  border-color: #b91c1c;
+}
+
+/* ==========================================================================
+   Global Voice Typing Listening Floating Bar
+   ========================================================================== */
+.global-voice-bar {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #003F8A;
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 10001;
+  border: 2px solid var(--accent);
+  animation: slideUp 0.3s ease;
+}
+
+.voice-pulse-ring {
+  width: 14px;
+  height: 14px;
+  background: #ef4444;
+  border-radius: 50%;
+  animation: voicePulse 1.2s infinite;
+}
+
+@keyframes voicePulse {
+  0% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+  70% { transform: scale(1.3); box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+  100% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+#global-mic-btn.listening {
+  background: #dc2626 !important;
+  color: #fff !important;
+  border-color: #ef4444 !important;
+  animation: pulse 1.5s infinite;
+}
+
+/* ==========================================================================
+   Rules of DBYC Official Document Plate & Digital Signatures
+   ========================================================================== */
+.rules-plate-sheet {
+  background: #ffffff;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 24px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 3px double #003F8A;
+  outline: 1.5px solid #b45309;
+  outline-offset: -5px;
+  color: #0f172a;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.45;
+  position: relative;
+}
+
+.rules-plot-box {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-left: 3px solid #003F8A;
+  border-radius: 4px;
+  padding: 6px 10px;
+  margin-bottom: 6px;
+}
+
+.rules-plot-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  color: #003F8A;
+  background: #e0e7ff;
+  padding: 1px 7px;
+  border-radius: 3px;
+  margin-bottom: 3px;
+}
+
+.sig-pad-box {
+  background: #f8fafc;
+  border: 1.5px dashed #003F8A;
+  border-radius: 6px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.sig-pad-canvas {
+  width: 100%;
+  height: 130px;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  display: block;
+  cursor: crosshair;
+  touch-action: none;
+}
+
+
+/* DBYC â€” Certificate Styles */
+.cert-preview-wrap {
+  overflow-x: auto;
+  padding: var(--s-3);
+  display: flex;
+  justify-content: center;
+  background: #E5E9F2;
+  border-radius: var(--r-md);
+}
+.certificate {
+  width: 960px;
+  height: 680px;
+  position: relative;
+  background: #ffffff;
+  overflow: hidden;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  border: 12px solid #003F8A;
+  box-sizing: border-box;
+}
+.cert-inner-border {
+  position: absolute;
+  inset: 8px;
+  border: 2px solid #FFB800;
+  box-sizing: border-box;
+}
+.cert-header {
+  text-align: center;
+  padding-top: 36px;
+}
+.cert-logo-img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 2px solid #FFB800;
+  margin: 0 auto 10px;
+  display: block;
+  object-fit: cover;
+}
+.cert-org-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: #003F8A;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.cert-org-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  color: #556688;
+  letter-spacing: 0.05em;
+  margin-top: 2px;
+}
+.cert-badge-pill {
+  display: inline-block;
+  margin-top: 14px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #003F8A;
+  background: #FFF5D6;
+  border: 1px solid #FFB800;
+  padding: 4px 16px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+.cert-main-title {
+  font-size: 34px;
+  font-weight: 700;
+  color: #002D63;
+  margin-top: 12px;
+}
+.cert-to-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  color: #778899;
+  letter-spacing: 0.08em;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+.cert-recipient {
+  font-size: 40px;
+  font-weight: 700;
+  color: #003F8A;
+  margin-top: 6px;
+  font-style: italic;
+  border-bottom: 2px solid #FFB800;
+  display: inline-block;
+  padding: 0 20px 4px;
+}
+.cert-description {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #334455;
+  max-width: 660px;
+  margin: 18px auto 0;
+  text-align: center;
+}
+.cert-footer-row {
+  position: absolute;
+  bottom: 30px;
+  left: 60px;
+  right: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.cert-sig {
+  text-align: center;
+  min-width: 170px;
+}
+.cert-sig-line {
+  border-top: 1px solid #667788;
+  margin-bottom: 4px;
+}
+.cert-sig-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: #002D63;
+}
+.cert-sig-sub {
+  font-family: 'Poppins', sans-serif;
+  font-size: 9px;
+  color: #778899;
+}
+.cert-seal-badge {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px dashed #003F8A;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 8px;
+  color: #003F8A;
+  font-weight: 700;
+  text-align: center;
+  background: #F8FAFC;
+}
+/* DBYC Responsive & Mobile App Styles */
+
+/* Native App Feel */
+html, body {
+  overscroll-behavior-y: contain;
+  -webkit-touch-callout: none;
+}
+
+button, a, .nav-item, .bottom-nav-item, .page-btn {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media screen and (max-width: 767px) {
+  #sidebar { transform: translateX(-100%); }
+  #sidebar.open { transform: translateX(0); }
+  #sidebar-overlay.open { display: block; }
+
+  .main-wrapper {
+    margin-left: 0;
+    padding-bottom: calc(var(--bottom-nav-h) + env(safe-area-inset-bottom, 12px));
+  }
+
+  #bottom-nav {
+    display: flex;
+    padding-bottom: env(safe-area-inset-bottom, 8px);
+    height: calc(var(--bottom-nav-h) + env(safe-area-inset-bottom, 0px));
+  }
+
+  .topbar-menu-btn { display: flex; }
+  #view-container { padding: var(--s-3); }
+  .grid-4 { grid-template-columns: repeat(2, 1fr); gap: var(--s-3); }
+  .grid-3 { grid-template-columns: 1fr; }
+  .grid-2 { grid-template-columns: 1fr; }
+  .page-header { flex-direction: column; align-items: flex-start; gap: var(--s-2); margin-bottom: var(--s-4); }
+  .page-actions { width: 100%; display: flex; flex-wrap: wrap; gap: 6px; }
+  .page-actions .btn { flex: 1 1 calc(50% - 6px); font-size: 12px; height: 34px; padding: 0 8px; }
+  .topbar-btn-text { display: none; }
+  .form-row { grid-template-columns: 1fr; }
+  .col-hide-mobile { display: none; }
+  .certificate { transform: scale(0.35); transform-origin: top left; margin-bottom: -430px; }
+
+  /* Mobile App Scoreboard Card */
+  #team-scoreboard-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: var(--s-2) !important;
+  }
+
+  .card {
+    border-radius: var(--r-md);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  :root { --sidebar-w: 72px; }
+  .sidebar-brand, .sidebar-section-title, .nav-item span.nav-label, .sidebar-user-info { display: none; }
+  .sidebar-header { justify-content: center; }
+  .nav-item { justify-content: center; }
+  .main-wrapper { margin-left: var(--sidebar-w); }
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .certificate { transform: scale(0.65); transform-origin: top left; margin-bottom: -230px; }
+}
+
+@media screen and (min-width: 1024px) {
+  #sidebar { transform: translateX(0) !important; }
+  .topbar-menu-btn { display: none !important; }
+}
+
+/* PWA App Install Banner */
+.pwa-install-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-3);
+  background: linear-gradient(135deg, #002D63 0%, #003F8A 100%);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: var(--r-lg);
+  margin-bottom: var(--s-4);
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(255,255,255,0.15);
+  animation: slideUp 0.3s ease-out;
+}
+.pwa-install-banner-text {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+}
+.pwa-install-btn {
+  background: var(--accent);
+  color: #1A1000;
+  font-weight: 700;
+  font-size: var(--text-xs);
+  padding: 6px 14px;
+  border-radius: var(--r-full);
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+  </style>
+  <style media="print">
+/* DBYC â€” Universal Print Stylesheet */
+
+@media print {
+  body {
+    background: #fff !important;
+    color: #111 !important;
+    font-size: 12pt;
+    line-height: 1.4;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* 1. Hide UI Navigation & Controls */
+  #sidebar,
+  #topbar,
+  #bottom-nav,
+  #sidebar-overlay,
+  #toast-container,
+  .page-actions,
+  .search-wrap,
+  .btn,
+  .tabs,
+  .pagination,
+  .table-actions,
+  #scan-btn,
+  .scanner-container,
+  select,
+  input,
+  textarea,
+  .modal-close,
+  .modal-footer,
+  label[title="Change Candidate Photo"],
+  label[title="Upload Photo"] {
+    display: none !important;
+  }
+
+  .main-wrapper {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  #view-container {
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+
+  /* 2. Modal ID Card Pass Printing */
+  #modal-overlay.open {
+    display: block !important;
+    position: static !important;
+    background: transparent !important;
+    padding: 0 !important;
+    backdrop-filter: none !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  #modal-overlay.open .modal {
+    box-shadow: none !important;
+    border: none !important;
+    background: transparent !important;
+    max-width: 100% !important;
+    max-height: none !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+
+  #modal-overlay.open .modal-header {
+    display: none !important;
+  }
+
+  #modal-overlay.open .modal-body {
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  #id-card-export-target {
+    margin: 30px auto !important;
+    border: 3px solid #003F8A !important;
+    border-radius: 16px !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    background: #fff !important;
+    width: 330px !important;
+    box-shadow: none !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  #id-card-export-target * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* 3. Batch Member Passes Printing (Grid) */
+  #qr-cards-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  #qr-cards-grid .card {
+    border: 2px solid #003F8A !important;
+    border-radius: 12px !important;
+    padding: 16px !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    background: #fff !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  #qr-cards-grid .card .btn {
+    display: none !important;
+  }
+
+  /* 4. Certificate Printing */
+  .certificate {
+    transform: none !important;
+    margin: 0 auto !important;
+    box-shadow: none !important;
+    border: 10px solid #003F8A !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    width: 100% !important;
+    max-width: 960px !important;
+    height: 640px !important;
+    display: block !important;
+  }
+
+  .cert-preview-wrap {
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* 5. Tables & Data Cards */
+  .table-wrapper {
+    border: none !important;
+    overflow: visible !important;
+  }
+
+  .data-table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+  }
+
+  .data-table th, .data-table td {
+    border: 1px solid #ccc !important;
+    padding: 6px 10px !important;
+    font-size: 10pt !important;
+  }
+
+  .card {
+    border: 1px solid #ddd !important;
+    box-shadow: none !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* 6. Student Admission Form Printable Sheet & Rules Plate */
+  .admission-form-sheet {
+    box-shadow: none !important;
+    border: 2px solid #003F8A !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 16px 20px !important;
+    margin: 0 auto !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .admission-page-1 {
+    page-break-after: always !important;
+    break-after: page !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .rules-plate-sheet {
+    box-shadow: none !important;
+    border: 3px double #003F8A !important;
+    outline: 1.5px solid #b45309 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 16px 20px !important;
+    margin: 0 auto !important;
+    page-break-before: always !important;
+    break-before: page !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .admission-form-sheet *, .rules-plate-sheet * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+
+
+/* Password Input Visibility Toggle Styling */
+.password-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.password-input-wrap .form-control {
+  padding-right: 42px !important;
+  width: 100%;
+}
+
+.password-toggle-btn {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  padding: 4px 6px;
+  border-radius: var(--r-sm, 4px);
+  color: var(--text-muted, #64748b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+  user-select: none;
+  z-index: 2;
+}
+
+.password-toggle-btn:hover {
+  background: rgba(0, 0, 0, 0.07);
+  transform: translateY(-50%) scale(1.1);
+}
+/* ==========================================================================
+   OFFICIAL DBYC FRONT PORTAL - BOLD LETTERS & RICH AMBIENT BACKGROUND
+   ========================================================================== */
+
+#login-screen {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: 
+    linear-gradient(145deg, rgba(0, 35, 85, 0.88) 0%, rgba(0, 50, 120, 0.84) 45%, rgba(15, 23, 42, 0.94) 100%),
+    url('assets/don-bosco-walk.jpg') center/cover no-repeat fixed !important;
+  padding: 16px 12px;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+#login-screen::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 10% 90%, rgba(255, 184, 0, 0.20) 0%, transparent 45%),
+    radial-gradient(circle at 90% 10%, rgba(56, 189, 248, 0.15) 0%, transparent 45%);
+  pointer-events: none;
+}
+
+/* Different Premium Card - Bold, Glassmorphism, Zero Overflow */
+.login-card {
+  position: relative !important;
+  background: rgba(255, 255, 255, 0.97) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border-radius: 24px !important;
+  width: 100% !important;
+  max-width: 440px !important;
+  box-sizing: border-box !important;
+  box-shadow: 0 25px 60px -10px rgba(0, 25, 70, 0.50), 0 0 0 1px rgba(255, 255, 255, 0.8) !important;
+  text-align: center !important;
+  overflow: hidden !important;
+  margin: auto !important;
+  border: none !important;
+  animation: slideUp 0.35s ease-out;
+}
+
+/* Glowing Top Gold Accent Halo */
+.login-top-accent {
+  height: 6px;
+  width: 100%;
+  background: linear-gradient(90deg, #FFB800 0%, #FFE082 35%, #F59E0B 70%, #D97706 100%);
+  box-shadow: 0 2px 10px rgba(245, 158, 11, 0.5);
+  display: block;
+}
+
+.login-body-wrapper {
+  padding: 22px 20px 20px 20px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+/* Circular Crest Logo with Glowing Border */
+.login-logo-wrap {
+  width: 88px;
+  height: 88px;
+  margin: 0 auto 12px;
+  position: relative;
+}
+
+.login-logo-img {
+  width: 88px !important;
+  height: 88px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: 3.5px solid #FFB800 !important;
+  box-shadow: 0 8px 24px rgba(0, 45, 99, 0.30) !important;
+  display: block;
+}
+
+/* Bold Institutional Header */
+.login-live-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%);
+  color: #065F46;
+  border: 1.5px solid #A7F3D0;
+  padding: 4px 14px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 6px rgba(16, 185, 129, 0.15);
+}
+
+.pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #10B981;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: pulseDot 2s infinite;
+}
+
+@keyframes pulseDot {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.login-title {
+  font-size: 21px !important;
+  font-weight: 900 !important;
+  color: #002D63 !important;
+  letter-spacing: 0.5px !important;
+  line-height: 1.2 !important;
+  margin: 0 0 2px 0 !important;
+  text-transform: uppercase !important;
+}
+
+.login-subhead {
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  color: #D97706 !important;
+  margin: 2px 0 3px 0 !important;
+  letter-spacing: 0.8px !important;
+  text-transform: uppercase !important;
+}
+
+.login-tagline {
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  color: #475569 !important;
+  margin: 0 0 12px 0 !important;
+}
+
+.login-gis-container {
+  display: flex !important;
+  justify-content: center !important;
+  margin-bottom: 12px !important;
+  width: 100% !important;
+}
+
+/* Bold Divider */
+.login-divider {
+  display: flex !important;
+  align-items: center !important;
+  margin: 10px 0 12px 0 !important;
+  color: #475569 !important;
+  font-size: 11px !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.8px !important;
+  text-transform: uppercase !important;
+}
+
+.login-divider::before,
+.login-divider::after {
+  content: '' !important;
+  flex: 1 !important;
+  border-bottom: 2px solid #CBD5E1 !important;
+}
+
+.login-divider span {
+  padding: 0 10px !important;
+}
+
+/* Button Stack strictly contained */
+.login-btn-stack {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+}
+
+/* Universal Bold Role Button */
+.bold-role-btn {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 12px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 12px 14px !important;
+  min-height: 50px !important;
+  border-radius: 12px !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  font-family: inherit !important;
+  transition: all 0.15s ease !important;
+  text-align: left !important;
+  user-select: none !important;
+  border: 1.5px solid transparent !important;
+  overflow: hidden !important;
+}
+
+.bold-role-btn:active {
+  transform: scale(0.98) !important;
+}
+
+.btn-icon-wrap {
+  font-size: 1.5rem !important;
+  line-height: 1 !important;
+  flex-shrink: 0 !important;
+}
+
+.btn-text-wrap {
+  flex: 1 !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
+}
+
+.btn-text-main {
+  font-size: 14px !important;
+  font-weight: 900 !important;
+  line-height: 1.25 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.btn-text-sub {
+  font-size: 10.5px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  margin-top: 2px !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.btn-arrow-wrap {
+  font-size: 1.2rem !important;
+  font-weight: 900 !important;
+  flex-shrink: 0 !important;
+  transition: transform 0.15s ease !important;
+}
+
+.bold-role-btn:hover .btn-arrow-wrap {
+  transform: translateX(4px) !important;
+}
+
+/* 1. Star VIP Feature: Youth Member Digital Pass */
+.btn-gold-vip {
+  background: linear-gradient(135deg, #FFFDF5 0%, #FEF3C7 50%, #FDE68A 100%) !important;
+  border-color: #F59E0B !important;
+  box-shadow: 0 6px 18px rgba(245, 158, 11, 0.25) !important;
+}
+.btn-gold-vip:hover {
+  background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%) !important;
+  border-color: #D97706 !important;
+}
+.btn-gold-vip .btn-text-main {
+  color: #78350F !important;
+}
+.btn-gold-vip .btn-text-sub {
+  color: #92400E !important;
+}
+.btn-gold-vip .btn-arrow-wrap {
+  color: #D97706 !important;
+}
+
+/* 2. Fr. Director: Solid Royal Navy */
+.btn-navy-royal {
+  background: linear-gradient(135deg, #002D63 0%, #00469B 100%) !important;
+  border-color: #00224D !important;
+  box-shadow: 0 4px 14px rgba(0, 45, 99, 0.35) !important;
+}
+.btn-navy-royal:hover {
+  background: linear-gradient(135deg, #001A3D 0%, #002D63 100%) !important;
+}
+.btn-navy-royal .btn-text-main {
+  color: #FFFFFF !important;
+}
+.btn-navy-royal .btn-text-sub {
+  color: #FFE082 !important;
+}
+.btn-navy-royal .btn-arrow-wrap {
+  color: #FFD054 !important;
+}
+
+/* 3. Fr. Assistant Director: Solid Vibrant Azure */
+.btn-azure-solid {
+  background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%) !important;
+  border-color: #0369A1 !important;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.28) !important;
+}
+.btn-azure-solid:hover {
+  background: linear-gradient(135deg, #0369A1 0%, #075985 100%) !important;
+}
+.btn-azure-solid .btn-text-main {
+  color: #FFFFFF !important;
+}
+.btn-azure-solid .btn-text-sub {
+  color: #E0F2FE !important;
+}
+.btn-azure-solid .btn-arrow-wrap {
+  color: #BAE6FD !important;
+}
+
+/* 4. Dual Grid for Leaders & Incharges */
+.dual-leader-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 8px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.btn-emerald-solid {
+  background: linear-gradient(135deg, #047857 0%, #10B981 100%) !important;
+  border-color: #065F46 !important;
+  box-shadow: 0 3px 10px rgba(16, 185, 129, 0.25) !important;
+  padding: 10px 10px !important;
+}
+.btn-emerald-solid .btn-text-main {
+  color: #FFFFFF !important;
+  font-size: 13px !important;
+}
+.btn-emerald-solid .btn-text-sub {
+  color: #D1FAE5 !important;
+  font-size: 10px !important;
+}
+
+.btn-indigo-solid {
+  background: linear-gradient(135deg, #4F46E5 0%, #6366F1 100%) !important;
+  border-color: #4338CA !important;
+  box-shadow: 0 3px 10px rgba(79, 70, 229, 0.25) !important;
+  padding: 10px 10px !important;
+}
+.btn-indigo-solid .btn-text-main {
+  color: #FFFFFF !important;
+  font-size: 13px !important;
+}
+.btn-indigo-solid .btn-text-sub {
+  color: #E0E7FF !important;
+  font-size: 10px !important;
+}
+
+/* 5. Utility Action Pills (High Contrast) */
+.login-utils-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  margin-top: 14px !important;
+  flex-wrap: wrap !important;
+  width: 100% !important;
+}
+
+.util-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 5px !important;
+  padding: 7px 12px !important;
+  border-radius: 20px !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  cursor: pointer !important;
+  border: 1.5px solid transparent !important;
+  transition: all 0.15s ease !important;
+  white-space: nowrap !important;
+}
+
+.util-pill-install {
+  background: #0F172A !important;
+  color: #FFFFFF !important;
+  border-color: #0F172A !important;
+}
+
+.util-pill-pwd {
+  background: #FFF7ED !important;
+  color: #9A3412 !important;
+  border-color: #F97316 !important;
+}
+
+.util-pill-ai {
+  background: #047857 !important;
+  color: #FFFFFF !important;
+  border-color: #047857 !important;
+}
+
+/* 6. Footer Salesian Motto */
+.login-card-foot {
+  margin-top: 14px !important;
+  padding-top: 10px !important;
+  border-top: 1.5px solid #F1F5F9 !important;
+}
+
+.salesian-foot-quote {
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  color: #334155 !important;
+  line-height: 1.35 !important;
+}
+
+.salesian-foot-quote em {
+  color: #002D63 !important;
+  font-weight: 900 !important;
+}
+
+.salesian-foot-meta {
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  color: #64748B !important;
+  margin-top: 3px !important;
+}
+
+@media screen and (max-width: 400px) {
+  .login-body-wrapper {
+    padding: 18px 14px 16px 14px !important;
+  }
+  .login-title {
+    font-size: 18px !important;
+  }
+  .btn-text-main {
+    font-size: 12.5px !important;
+  }
+  .dual-leader-grid {
+    grid-template-columns: 1fr !important;
+    gap: 6px !important;
+  }
+}
+
+
+/* ==========================================================================
+   CLASSIC DBYC DASHBOARD - ANTI-LETTER-OVERFLOW & RESPONSIVE PERFECTION
+   ========================================================================== */
+
+/* Stat Cards: Guaranteed zero text overflow */
+.stat-card {
+  background: var(--surface) !important;
+  border-radius: var(--r-lg) !important;
+  padding: 12px 14px !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: 0 2px 8px rgba(14, 27, 53, 0.05) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(14, 27, 53, 0.08) !important;
+}
+
+.stat-icon {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: var(--r-md) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 1.25rem !important;
+  flex-shrink: 0 !important;
+}
+
+.stat-body {
+  flex: 1 !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
+}
+
+.stat-label {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  color: var(--text-muted) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  line-height: 1.25 !important;
+}
+
+.stat-value {
+  font-size: clamp(1.2rem, 2.5vw, 1.55rem) !important;
+  font-weight: 800 !important;
+  color: var(--text-primary) !important;
+  line-height: 1.2 !important;
+  margin: 2px 0 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.stat-change {
+  font-size: 10.5px !important;
+  color: var(--text-muted) !important;
+  margin-top: 1px !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  line-height: 1.2 !important;
+}
+.stat-change.up { color: var(--success) !important; font-weight: 600; }
+.stat-change.down { color: var(--danger) !important; font-weight: 600; }
+
+/* Scoreboard Grid: Responsive without clipping */
+#team-scoreboard-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)) !important;
+  gap: 10px !important;
+}
+
+/* Responsive Overrides */
+@media screen and (max-width: 767px) {
+  #view-container {
+    padding: 12px 10px !important;
+  }
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+  }
+  .stat-card {
+    padding: 10px 10px !important;
+    gap: 8px !important;
+  }
+  .stat-icon {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 1.05rem !important;
+  }
+  .stat-label {
+    font-size: 10px !important;
+  }
+  .stat-value {
+    font-size: 1.2rem !important;
+  }
+  .stat-change {
+    font-size: 9.5px !important;
+  }
+  #team-scoreboard-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .grid-4 {
+    grid-template-columns: 1fr !important;
+  }
+  #team-scoreboard-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+</style>
+
+<style>
+/* ============================================================
+   DBYC STANDARD PWA — Mobile-First & Cross-Platform Styles
+   Works identically on Android & Laptop — No Platform Drift
+   ============================================================ */
+
+/* 1. PWA Viewport & Safe Area — Android + iOS + Desktop */
+:root {
+  --safe-top:    env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left:   env(safe-area-inset-left, 0px);
+  --safe-right:  env(safe-area-inset-right, 0px);
+}
+html {
+  height: -webkit-fill-available;
+  height: 100dvh;
+}
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  min-height: 100dvh;
+  /* Force light color scheme — prevents Android dark mode inversion */
+  color-scheme: light only;
+  forced-color-adjust: none;
+}
+
+/* 2. Touch targets — WCAG minimum 44x44px on mobile */
+button, .btn, .nav-item, .bottom-nav-item, .bold-role-btn, .util-pill {
+  min-height: 44px;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* 3. Sidebar — Desktop always visible, Mobile slide-in */
+@media (min-width: 1024px) {
+  #sidebar {
+    transform: translateX(0) !important;
+    position: fixed !important;
+  }
+  .main-wrapper {
+    margin-left: var(--sidebar-w) !important;
+  }
+  #bottom-nav { display: none !important; }
+  .topbar-menu-btn { display: none !important; }
+}
+@media (max-width: 1023px) {
+  #sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+  }
+  #sidebar.open { transform: translateX(0); }
+  .main-wrapper { margin-left: 0 !important; }
+  #bottom-nav { display: flex !important; }
+  .topbar-menu-btn { display: flex !important; }
+}
+
+/* 4. Bottom Nav — safe area aware, proper mobile dock */
+#bottom-nav {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: #ffffff;
+  border-top: 1px solid #DDE3F0;
+  z-index: 200;
+  padding-bottom: var(--safe-bottom);
+  height: calc(68px + var(--safe-bottom));
+  box-shadow: 0 -4px 20px rgba(14,27,53,0.08);
+}
+.bottom-nav-inner {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+  height: 68px;
+}
+.bottom-nav-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 6px 4px;
+  border-radius: 10px;
+  color: #8A97B4;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  text-decoration: none;
+}
+.bottom-nav-item .nav-icon { font-size: 1.3rem; line-height: 1; }
+.bottom-nav-item.active {
+  color: #003F8A;
+}
+.bottom-nav-item.active .nav-icon {
+  filter: drop-shadow(0 2px 4px rgba(0,63,138,0.3));
+}
+
+/* 5. Main content padding for bottom nav on mobile */
+@media (max-width: 1023px) {
+  .main-wrapper {
+    padding-bottom: calc(68px + var(--safe-bottom) + 8px) !important;
+  }
+  #view-container {
+    padding: 12px 10px !important;
+  }
+}
+
+/* 6. Topbar — standard height, safe area top */
+#topbar {
+  padding-top: var(--safe-top);
+  min-height: calc(64px + var(--safe-top));
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+
+/* 7. Topbar buttons — show/hide text based on width */
+@media (max-width: 640px) {
+  .topbar-btn-text { display: none !important; }
+  #topbar .btn { padding: 0 8px !important; min-width: 36px; }
+}
+
+/* 8. Login screen — full viewport, centered, no overflow */
+#login-screen {
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: max(16px, env(safe-area-inset-top, 16px)) 12px max(16px, env(safe-area-inset-bottom, 16px)) 12px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 9. Login card — max width, centered, no overflow */
+.login-card {
+  width: 100% !important;
+  max-width: 440px !important;
+  box-sizing: border-box !important;
+  margin: auto !important;
+  overflow: hidden !important;
+}
+.login-body-wrapper {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  padding: 20px 18px !important;
+}
+.login-btn-stack,
+.bold-role-btn,
+.dual-leader-grid {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+.btn-text-main, .btn-text-sub {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+/* 10. Scrollable sidebar nav */
+.sidebar-nav {
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+/* 11. Prevent horizontal scroll everywhere */
+body, #app-shell, .main-wrapper, #view-container {
+  overflow-x: hidden !important;
+  max-width: 100vw;
+}
+
+/* 12. Modal — full screen on mobile, centered on desktop */
+#modal-overlay {
+  padding: 12px;
+}
+.modal {
+  width: 100% !important;
+  max-width: 580px !important;
+  max-height: calc(100vh - 32px) !important;
+  max-height: calc(100dvh - 32px) !important;
+  border-radius: 20px !important;
+}
+@media (max-width: 480px) {
+  .modal {
+    max-height: calc(100dvh - 16px) !important;
+    border-radius: 16px 16px 0 0 !important;
+    margin-top: auto !important;
+  }
+  #modal-overlay {
+    align-items: flex-end !important;
+    padding: 0 !important;
+  }
+}
+
+/* 13. PWA Standalone — hide browser UI artifacts */
+@media (display-mode: standalone) {
+  #topbar {
+    padding-top: var(--safe-top);
+  }
+  #login-screen {
+    padding-top: max(24px, var(--safe-top));
+  }
+}
+
+/* 14. Grid responsive — works on all screen widths */
+.grid-4 {
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)) !important;
+}
+@media (max-width: 480px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr) !important; }
+  .grid-3 { grid-template-columns: 1fr !important; }
+  .grid-2 { grid-template-columns: 1fr !important; }
+}
+@media (min-width: 1024px) {
+  .grid-4 { grid-template-columns: repeat(4, 1fr) !important; }
+  .grid-3 { grid-template-columns: repeat(3, 1fr) !important; }
+}
+
+/* 15. Tablet (768-1023px) — collapsed icon sidebar */
+@media (min-width: 768px) and (max-width: 1023px) {
+  :root { --sidebar-w: 72px; }
+  .sidebar-brand, .sidebar-section-title,
+  .nav-item .nav-label, .sidebar-user-info { display: none !important; }
+  .sidebar-header { justify-content: center !important; }
+  .nav-item { justify-content: center !important; }
+  .sidebar-footer .btn { display: none !important; }
+  #sidebar { transform: translateX(0) !important; }
+  .main-wrapper { margin-left: 72px !important; }
+  #bottom-nav { display: none !important; }
+}
+
+/* 16. Font rendering — crisp on all platforms */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* 17. Image rendering */
+img { image-rendering: -webkit-optimize-contrast; }
+</style>
+
+  <!-- Free Third-Party Libraries (CDNs) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+
+  <!-- Toast Notification Hub -->
+  <div id="toast-container"></div>
+
+  <!-- Modal Overlay -->
+  <div id="modal-overlay"></div>
+
+  <!-- Mobile Sidebar Dimmer Overlay -->
+  <div id="sidebar-overlay" onclick="UI.toggleSidebar()"></div>
+
+  <!-- 1. LOGIN SCREEN - BOLD DIFFERENT PORTAL -->
+  <section id="login-screen">
+    <div class="login-card">
+      <!-- Top Salesian Ribbon Halo -->
+      <div class="login-top-accent"></div>
+
+      <div class="login-body-wrapper">
+        <!-- Crest & Institutional Header -->
+        <div class="login-logo-wrap">
+          <img src="assets/dbyc-logo.jpg" alt="Don Bosco Youth Centre" class="login-logo-img" id="login-logo-img">
+        </div>
+
+        <div class="login-live-badge">
+          <span class="pulse-dot"></span>
+          <span>BOSCO PULSE &bull; தொன்போஸ்கோ தளம்</span>
+        </div>
+
+        <h1 class="login-title">DON BOSCO YOUTH CENTRE</h1>
+        <h2 class="login-subhead">YOUTH MOVEMENT &bull; BASIN BRIDGE</h2>
+        <p class="login-tagline">Learn &bull; Lead &bull; Serve &bull; Grow &bull; Est. 1950</p>
+
+        <!-- Google GIS Auth Container -->
+        <div id="g_id_signin" class="login-gis-container"></div>
+
+        <!-- Bold Divider -->
+        <div class="login-divider">
+          <span>CHOOSE YOUR ACCESS &bull; பொறுப்பாளர் தெரிவு</span>
+        </div>
+
+        <!-- Buttons Stack (Strictly Contained, Bold, High-Contrast) -->
+        <div class="login-btn-stack">
+          <!-- 1. Star VIP Card: Youth Member Portal (Top Prominence!) -->
+          <button class="bold-role-btn btn-gold-vip" onclick="loginAsRole('member')" title="Youth Member Portal & Digital ID Pass">
+            <span class="btn-icon-wrap">🪪</span>
+            <div class="btn-text-wrap">
+              <div class="btn-text-main">Youth Member Portal (My Pass)</div>
+              <div class="btn-text-sub">Digital ID &bull; Points Board &bull; Oratory Rules &bull; அட்டை</div>
+            </div>
+            <span class="btn-arrow-wrap">➔</span>
+          </button>
+
+          <!-- 2. Fr. Director: Solid Royal Navy -->
+          <button class="bold-role-btn btn-navy-royal" onclick="loginAsRole('director')" title="Fr. Director Full Executive Access">
+            <span class="btn-icon-wrap">👑</span>
+            <div class="btn-text-wrap">
+              <div class="btn-text-main">Fr. Director (முழு அணுகல்)</div>
+              <div class="btn-text-sub">Full Management &bull; Approvals &bull; Official Authority</div>
+            </div>
+            <span class="btn-arrow-wrap">➔</span>
+          </button>
+
+          <!-- 3. Fr. Assistant Director: Solid Vibrant Azure -->
+          <button class="bold-role-btn btn-azure-solid" onclick="loginAsRole('asst_director')" title="Fr. Assistant Director Full Access">
+            <span class="btn-icon-wrap">⚡</span>
+            <div class="btn-text-wrap">
+              <div class="btn-text-main">Fr. Assistant Director</div>
+              <div class="btn-text-sub">Direct Leadership &bull; Activities &bull; Full Access</div>
+            </div>
+            <span class="btn-arrow-wrap">➔</span>
+          </button>
+
+          <!-- 4. Animators & Incharges 2-Column Grid -->
+          <div class="dual-leader-grid">
+            <button class="bold-role-btn btn-emerald-solid" onclick="loginAsRole('leader', 'Seniors')" title="Group Leader: Members & Points">
+              <span class="btn-icon-wrap" style="font-size:1.25rem">🎖️</span>
+              <div class="btn-text-wrap">
+                <div class="btn-text-main">Group Leader</div>
+                <div class="btn-text-sub">Members & Points &bull; புள்ளிகள்</div>
+              </div>
+            </button>
+
+            <button class="bold-role-btn btn-indigo-solid" onclick="loginAsRole('incharge', 'Juniors')" title="Group Incharge: Attendance Only">
+              <span class="btn-icon-wrap" style="font-size:1.25rem">🛡️</span>
+              <div class="btn-text-wrap">
+                <div class="btn-text-main">Group Incharge</div>
+                <div class="btn-text-sub">Attendance &bull; வருகைப் பதிவு</div>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Quick Utilities Action Row -->
+        <div class="login-utils-row">
+          <button class="util-pill util-pill-install pwa-install-trigger" onclick="PWA.install()" title="Install App on Phone / PC">
+            <span>📲</span> <span>Install App (நிறுவுக)</span>
+          </button>
+          <button class="util-pill util-pill-pwd" onclick="Auth.openForgotPasswordModal('director')" title="Reset Authority Password">
+            <span>🔑</span> <span>Password Reset</span>
+          </button>
+          <button class="util-pill util-pill-ai" onclick="AIDoctor.openModal()" title="AI PWA Assistant & Auto-Doctor">
+            <span>🤖</span> <span>AI Doctor</span>
+          </button>
+        </div>
+
+        <!-- Footer Salesian Quote -->
+        <div class="login-card-foot">
+          <div class="salesian-foot-quote">
+            <em>&ldquo;Run, jump, make noise, but do not sin!&rdquo;</em>
+            <div>&mdash; St. John Bosco &bull; புனித தொன்போஸ்கோ</div>
+          </div>
+          <div class="salesian-foot-meta">Bosco Pulse Youth Movement System &bull; Chennai - 12</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. AUTHENTICATED APP SHELL -->
+  <div id="app-shell" class="hidden">
+    <!-- Sidebar -->
+    <aside id="sidebar">
+      <div class="sidebar-header">
+        <img src="assets/dbyc-logo.jpg" alt="DBYC" class="sidebar-logo" id="sidebar-logo-img">
+        <div class="sidebar-brand">
+          DBYC PORTAL
+          <span>Don Bosco Youth Centre</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="sidebar-section-title">Operations</div>
+        <a class="nav-item" data-route="dashboard" onclick="Router.navigate('dashboard');UI.toggleSidebar()">
+          <span class="nav-icon">📊</span><span class="nav-label">Dashboard</span>
+        </a>
+        <a class="nav-item" data-route="members" onclick="Router.navigate('members');UI.toggleSidebar()">
+          <span class="nav-icon">👥</span><span class="nav-label">Members Registry</span>
+        </a>
+        <a class="nav-item" data-route="attendance" onclick="Router.navigate('attendance');UI.toggleSidebar()">
+          <span class="nav-icon">📷</span><span class="nav-label">QR Attendance</span>
+        </a>
+        <a class="nav-item" data-route="qr" onclick="Router.navigate('qr');UI.toggleSidebar()">
+          <span class="nav-icon">🪪</span><span class="nav-label">Member QR Passes</span>
+        </a>
+
+        <div class="sidebar-section-title">Youth Life &amp; Events</div>
+        <a class="nav-item" data-route="birthdays" onclick="Router.navigate('birthdays');UI.toggleSidebar()">
+          <span class="nav-icon">🎂</span><span class="nav-label">Birthday Celebrations</span>
+        </a>
+        <a class="nav-item" data-route="event-calendar" onclick="Router.navigate('event-calendar');UI.toggleSidebar()">
+          <span class="nav-icon">📅</span><span class="nav-label">Event Calendar</span>
+        </a>
+        <a class="nav-item" data-route="upcoming-events" onclick="Router.navigate('upcoming-events');UI.toggleSidebar()">
+          <span class="nav-icon">🗓️</span><span class="nav-label">Upcoming Events</span>
+        </a>
+        <a class="nav-item" data-route="minutes" onclick="Router.navigate('minutes');UI.toggleSidebar()">
+          <span class="nav-icon">📋</span><span class="nav-label">DBYC Minutes</span>
+        </a>
+        <a class="nav-item" data-route="news" onclick="Router.navigate('news');UI.toggleSidebar()">
+          <span class="nav-icon">📰</span><span class="nav-label">DBYC News &amp; Updates</span>
+        </a>
+
+        <div class="sidebar-section-title">Analytics &amp; Teams</div>
+        <a class="nav-item" data-route="statistics" onclick="Router.navigate('statistics');UI.toggleSidebar()">
+          <span class="nav-icon">📉</span><span class="nav-label">Members Statistics</span>
+        </a>
+        <a class="nav-item" data-route="teams" onclick="Router.navigate('teams');UI.toggleSidebar()">
+          <span class="nav-icon">🏅</span><span class="nav-label">Team System</span>
+        </a>
+
+        <div class="sidebar-section-title">Certificates &amp; Reports</div>
+        <a class="nav-item" data-route="certificates" onclick="Router.navigate('certificates');UI.toggleSidebar()">
+          <span class="nav-icon">📜</span><span class="nav-label">Certificates</span>
+        </a>
+        <a class="nav-item" data-route="reports" onclick="Router.navigate('reports');UI.toggleSidebar()">
+          <span class="nav-icon">📈</span><span class="nav-label">Reports &amp; Analytics</span>
+        </a>
+
+        <div class="sidebar-section-title">Oratory &amp; Salesian Life</div>
+        <a class="nav-item" data-route="rules" onclick="Router.navigate('rules');UI.toggleSidebar()">
+          <span class="nav-icon">⚖️</span><span class="nav-label">Rules of the Oratory</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-user" onclick="UI.openAuthorityProfileModal()" title="Edit Authority Profile">
+          <div class="sidebar-user-avatar user-display-avatar">DB</div>
+          <div class="sidebar-user-info">
+            <div class="sidebar-user-name user-display-name">Officer</div>
+            <div class="sidebar-user-role user-display-role">Director</div>
+          </div>
+        </div>
+        <button class="btn btn-outline btn-sm btn-full pwa-install-trigger" onclick="PWA.install()" style="color:var(--accent);border-color:var(--accent);margin-top:var(--s-2)">
+          📲 Install DBYC App
+        </button>
+        <button class="btn btn-outline btn-sm btn-full" onclick="AIDoctor.openModal();UI.toggleSidebar()" style="color:#10b981;border-color:#10b981;background:rgba(16,185,129,0.12);margin-top:var(--s-2)">
+          🤖 AI PWA Doctor (AI சரிசெய்தல்)
+        </button>
+        <button class="btn btn-ghost btn-sm btn-full" style="color:rgba(255,255,255,0.7);margin-top:var(--s-2)" onclick="Auth.signOut()">
+          🚪 Sign Out
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Wrapper -->
+    <div class="main-wrapper">
+      <!-- Topbar -->
+      <header id="topbar">
+        <button class="topbar-menu-btn" onclick="UI.toggleSidebar()" title="Toggle Navigation">☰</button>
+        <div class="topbar-title" id="topbar-page-title">Dashboard Overview</div>
+        <div class="topbar-right">
+          <button class="btn btn-accent btn-sm pwa-install-trigger" onclick="PWA.install()" title="Install DBYC App on your device">
+            <span>📲</span><span class="topbar-btn-text">Install App</span>
+          </button>
+          <button class="btn btn-outline btn-sm" onclick="AIDoctor.openModal()" title="AI PWA Assistant &amp; Doctor" style="border-color:#10b981;color:#047857;background:rgba(16,185,129,0.08)">
+            <span>🤖</span><span class="topbar-btn-text">AI Doctor</span>
+          </button>
+          <button class="btn btn-outline btn-sm" id="global-mic-btn" onclick="VoiceKeyboard.toggleListening()" title="Tamil &amp; English Voice Typing" style="font-size:var(--text-xs);padding:4px 10px;">🎙️ Voice</button>
+          <button class="btn btn-outline btn-sm" onclick="VoiceKeyboard.toggleKeyboard()" title="Tamil On-Screen Keyboard" style="font-size:var(--text-xs);padding:4px 10px;">⌨️ தமிழ்</button>
+          <button class="btn btn-ghost btn-sm btn-icon" onclick="UI.cycleTheme()" title="Switch Don Bosco Portal Theme" style="font-size:1.1rem;">🎨</button>
+          <div style="text-align:right" class="col-hide-mobile">
+            <div style="font-size:var(--text-xs);font-weight:700;color:var(--primary)" class="user-display-name">Officer</div>
+            <div style="font-size:10px;color:var(--text-muted)" class="user-display-role">Director</div>
+          </div>
+          <div class="topbar-avatar user-display-avatar" onclick="UI.openAuthorityProfileModal()" title="Authority Settings">DB</div>
+        </div>
+      </header>
+
+      <!-- Active Page View Container -->
+      <main id="view-container">
+        <!-- Injected via Router -->
+      </main>
+
+      <!-- Bottom Mobile Bar -->
+      <nav id="bottom-nav">
+        <div class="bottom-nav-inner">
+          <div class="bottom-nav-item" data-route="dashboard" onclick="Router.navigate('dashboard')">
+            <div class="nav-icon">📊</div>
+            <span>Home</span>
+          </div>
+          <div class="bottom-nav-item" data-route="members" onclick="Router.navigate('members')">
+            <div class="nav-icon">👥</div>
+            <span>Members</span>
+          </div>
+          <div class="bottom-nav-item" data-route="attendance" onclick="Router.navigate('attendance')">
+            <div class="nav-icon">📷</div>
+            <span>Scan</span>
+          </div>
+          <div class="bottom-nav-item" data-route="birthdays" onclick="Router.navigate('birthdays')">
+            <div class="nav-icon">🎂</div>
+            <span>Birthdays</span>
+          </div>
+          <div class="bottom-nav-item" data-route="teams" onclick="Router.navigate('teams')">
+            <div class="nav-icon">🏅</div>
+            <span>Teams</span>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+    <!-- App Core JavaScript Files (Root references) -->
+  <script src="logo-data.js"></script>
+  <script src="theme-data.js"></script>
+  <script src="config.js"></script>
+  <script src="utils.js"></script>
+  <script src="auth.js"></script>
+  <script src="api.js"></script>
+  <script src="router.js"></script>
+  <script src="dashboard.js"></script>
+  <script src="events.js"></script>
+  <script src="formation.js"></script>
+  <script src="volunteer.js"></script>
+  <script src="leaderboard.js"></script>
+  <script src="members.js"></script>
+  <script src="attendance.js"></script>
+  <script src="qr-generator.js"></script>
+  <script src="certificates.js"></script>
+  <script src="reports.js"></script>
+  <script src="voice-keyboard.js"></script>
+  <script src="rules.js"></script>
+  <script src="ai-doctor.js"></script>
+  <script src="birthdays.js"></script>
+  <script src="event-calendar.js"></script>
+  <script src="dbyc-features.js"></script>
+  <script src="app.js"></script>
+
+  <!-- Don Bosco Spiritual Theme & Logo Real-Time Enforcer -->
+  <script>
+    (function() {
+      function forceDonBoscoTheme() {
+        // 1. Enforce Don Bosco Background Theme using base64 image data
+        if (typeof DBYC_THEMES !== 'undefined') {
+          var activeKey = localStorage.getItem('dbyc_active_theme') || 'banner';
+          var bgImg = DBYC_THEMES[activeKey] || DBYC_THEMES.banner;
+          if (bgImg) {
+            document.body.style.backgroundImage = 'linear-gradient(180deg, rgba(244, 246, 251, 0.93) 0%, rgba(240, 244, 250, 0.95) 100%), url("' + bgImg + '")';
+            document.body.style.backgroundSize = 'cover';
+            document.body.style.backgroundPosition = 'center center';
+            document.body.style.backgroundRepeat = 'no-repeat';
+            document.body.style.backgroundAttachment = 'fixed';
+
+// Login screen retains clean Salesian royal blue gradient
+          }
+        }
+
+        // 2. Enforce Don Bosco Logo across UI
+        if (typeof DBYC_LOGO_DATA !== 'undefined' && DBYC_LOGO_DATA) {
+          document.querySelectorAll('img[src*="dbyc-logo.jpg"]').forEach(function(img) {
+            img.src = DBYC_LOGO_DATA;
+          });
+        }
+      }
+
+      window.addEventListener('DOMContentLoaded', forceDonBoscoTheme);
+      setTimeout(forceDonBoscoTheme, 100);
+      setTimeout(forceDonBoscoTheme, 600);
+
+      // Hook into UI.applyTheme for instant reactive theme switching
+      if (typeof UI !== 'undefined') {
+        var originalApply = UI.applyTheme;
+        UI.applyTheme = function(key) {
+          if (originalApply) originalApply.call(UI, key);
+          forceDonBoscoTheme();
+        };
+      }
+    })();
+  </script>
+</body>
+</html>
